@@ -1,226 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matsulling Video Hub</title>
-    <link rel="icon" type="favicon.png" href="favicon.png">
+    <title>Matsullin | Audio-Visual Mastery</title>
+    
+    <meta name="description" content="Matsullin: Precision in Sound. Purpose in Sight. Premium production studio.">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
     
     <style>
         :root {
-            --deep-navy: #1a3c5a;
-            --steel-blue: #5b84a8;
-            --light-gray: #f4f7f9;
-            --white: #ffffff;
-            --text-dark: #333;
+            --navy: #1a3c5a;
+            --steel: #5b84a8;
         }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--light-gray);
-            color: var(--text-dark);
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
-
-        /* Navigation */
-        nav {
-            background: var(--white);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        .hero-mesh {
+            background-color: #1a3c5a;
+            background-image: radial-gradient(at 0% 0%, hsla(210,64%,23%,1) 0, transparent 50%), 
+                              radial-gradient(at 50% 0%, hsla(208,30%,51%,1) 0, transparent 50%);
         }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: bold;
-            font-size: 1.5rem;
-            color: var(--deep-navy);
-        }
-
-        .logo-area img {
-            height: 40px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--deep-navy);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--steel-blue);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(26, 60, 90, 0.8), rgba(26, 60, 90, 0.8)), 
-                        url('https://images.unsplash.com/photo-1514525253361-bee8718a7439?auto=format&fit=crop&q=80&w=1000');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 5%;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            background-color: var(--steel-blue);
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .btn:hover {
-            transform: scale(1.05);
-            background-color: #4a6d8c;
-        }
-
-        /* Content Sections */
-        .container {
-            padding: 50px 5%;
-        }
-
-        .section-title {
-            border-left: 5px solid var(--deep-navy);
-            padding-left: 15px;
-            margin-bottom: 30px;
-            color: var(--deep-navy);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .video-placeholder {
-            width: 100%;
-            aspect-ratio: 16/9;
-            background: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-
-        .card-info {
-            padding: 15px;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--deep-navy);
-            color: white;
-            text-align: center;
-            padding: 40px;
-            margin-top: 50px;
-        }
-
-        @media (max-width: 768px) {
-            nav ul { display: none; }
-            .hero h1 { font-size: 2rem; }
+        .audio-card:hover {
+            border-color: var(--steel);
+            transform: translateY(-2px);
         }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased">
 
-    <nav>
-        <div class="logo-area">
-            <img src="favicon.png" alt="Logo"> 
-            <span>MATSULLIN</span>
+    <nav class="fixed w-full z-50 glass-nav border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="favicon.png" alt="M" class="h-10 w-auto">
+                <span class="font-black text-2xl tracking-tighter text-[#1a3c5a]">MATSULLIN</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about" class="text-sm font-bold uppercase tracking-widest hover:text-[#5b84a8] transition-colors">About</a>
+                <a href="#video" class="text-sm font-bold uppercase tracking-widest hover:text-[#5b84a8] transition-colors">Video</a>
+                <a href="#music" class="text-sm font-bold uppercase tracking-widest hover:text-[#5b84a8] transition-colors">Music</a>
+                <a href="#contact" class="bg-[#1a3c5a] text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-[#5b84a8] transition-all">Work With Us</a>
+            </div>
         </div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#music">Music</a></li>
-            <li><a href="#videos">Videos</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
     </nav>
 
-    <header class="hero" id="home">
-        <h1>Your Hub for Music & Video Excellence</h1>
-        <p>Experience high-fidelity sound and cinematic visuals.</p><br>
-        <a href="#videos" class="btn">Latest Releases</a>
-    </header>
-
-    <div class="container" id="videos">
-        <h2 class="section-title">Featured Videos</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="video-placeholder">
-                    <p>▶ Play Video</p>
-                </div>
-                <div class="card-info">
-                    <h3>Project Alpha: Cinematic Edit</h3>
-                    <p>Official Music Video - 2026</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="video-placeholder"><p>▶ Play Video</p></div>
-                <div class="card-info">
-                    <h3>Live at the Arena</h3>
-                    <p>Performance Highlight</p>
+    <section class="hero-mesh pt-44 pb-32 px-6 text-white text-center md:text-left">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-2/3">
+                <span class="inline-block px-4 py-1 rounded-full bg-white/10 text-xs font-bold tracking-[0.2em] mb-6 border border-white/20 uppercase">Est. 2026 Production Lab</span>
+                <h1 class="text-6xl md:text-8xl font-black leading-none mb-8">Precision in <span class="text-[#5b84a8]">Sound.</span></h1>
+                <p class="text-xl text-slate-300 max-w-xl mb-10 leading-relaxed font-light">
+                    Matsullin is a boutique media studio where frequency meets frame. We engineer auditory legacies and cinematic visuals for the next generation.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#video" class="bg-white text-[#1a3c5a] px-10 py-4 rounded-2xl font-black hover:shadow-2xl transition-all">Explore Work</a>
+                    <a href="#contact" class="bg-transparent border border-white/30 px-10 py-4 rounded-2xl font-black hover:bg-white/10 transition-all">Start Project</a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container" id="music">
-        <h2 class="section-title">New Tracks</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-info">
-                    <p><strong>Track 01: Midnight Echo</strong></p>
-                    <audio controls style="width: 100%;">
-                        <source src="your-audio-file.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
+    <section id="about" class="py-24 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-[#5b84a8] font-black uppercase tracking-widest text-sm mb-4">The Philosophy</h2>
+            <p class="text-3xl md:text-4xl font-bold text-[#1a3c5a] leading-tight italic">
+                "In an era of digital noise, we specialize in intentionality. We don't just capture moments—we engineer them."
+            </p>
+            <div class="mt-12 h-1 w-20 bg-[#5b84a8] mx-auto rounded-full"></div>
+        </div>
+    </section>
+
+    <section id="video" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="flex items-center justify-between mb-12">
+            <h2 class="text-4xl font-black text-[#1a3c5a]">Visual Reel</h2>
+            <div class="h-px flex-1 bg-slate-200 mx-8 hidden md:block"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="group cursor-pointer">
+                <div class="aspect-video rounded-[2rem] overflow-hidden shadow-2xl bg-slate-200 relative">
+                    <img src="https://images.unsplash.com/photo-1492691523567-6170c3295db5?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Cinematography">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-all"></div>
+                </div>
+                <h3 class="mt-6 text-2xl font-bold text-[#1a3c5a]">Project: Nocturnal</h3>
+                <p class="text-slate-500 uppercase tracking-widest text-xs font-bold">Cinematography / 4K</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-video rounded-[2rem] overflow-hidden shadow-2xl bg-slate-200 relative">
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Music Video">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-all"></div>
+                </div>
+                <h3 class="mt-6 text-2xl font-bold text-[#1a3c5a]">The Studio Sessions</h3>
+                <p class="text-slate-500 uppercase tracking-widest text-xs font-bold">Documentary / Sound Design</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="music" class="py-24 px-6 bg-slate-100">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-black text-[#1a3c5a] mb-16 underline decoration-[#5b84a8] decoration-4 underline-offset-8">Acoustic Identity</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                <div class="audio-card bg-white p-8 rounded-3xl border border-transparent shadow-sm transition-all">
+                    <div class="w-12 h-12 bg-[#1a3c5a] text-white rounded-xl flex items-center justify-center font-bold mb-6">01</div>
+                    <h4 class="font-bold text-xl text-[#1a3c5a] mb-2">Steel Skies</h4>
+                    <p class="text-sm text-slate-400 mb-6 uppercase tracking-tighter">Mastering / Final Cut</p>
+                    <audio controls class="w-full h-8">
+                        <source src="#" type="audio/mpeg">
                     </audio>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-info">
-                    <p><strong>Track 02: Steel Skies</strong></p>
-                    <audio controls style="width: 100%;">
-                        <source src="your-audio-file-2.mp3" type="audio/mpeg">
+                <div class="audio-card bg-white p-8 rounded-3xl border border-transparent shadow-sm transition-all">
+                    <div class="w-12 h-12 bg-[#1a3c5a] text-white rounded-xl flex items-center justify-center font-bold mb-6">02</div>
+                    <h4 class="font-bold text-xl text-[#1a3c5a] mb-2">Echoes of Matsullin</h4>
+                    <p class="text-sm text-slate-400 mb-6 uppercase tracking-tighter">Atmospheric Score</p>
+                    <audio controls class="w-full h-8">
+                        <source src="#" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="audio-card bg-white p-8 rounded-3xl border border-transparent shadow-sm transition-all">
+                    <div class="w-12 h-12 bg-[#1a3c5a] text-white rounded-xl flex items-center justify-center font-bold mb-6">03</div>
+                    <h4 class="font-bold text-xl text-[#1a3c5a] mb-2">Deep Logic</h4>
+                    <p class="text-sm text-slate-400 mb-6 uppercase tracking-tighter">Engineered Bass</p>
+                    <audio controls class="w-full h-8">
+                        <source src="#" type="audio/mpeg">
                     </audio>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 CMS Media. All Rights Reserved.</p>
+    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto text-center">
+        <div class="bg-[#1a3c5a] p-12 md:p-20 rounded-[3rem] shadow-3xl text-white relative overflow-hidden">
+            <h3 class="text-4xl font-black mb-4">Start Your Narrative.</h3>
+            <p class="text-slate-300 mb-10">Available for select projects worldwide.</p>
+            
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4 text-left">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" name="name" placeholder="Full Name" required class="w-full bg-white/5 border border-white/20 p-4 rounded-2xl focus:border-[#5b84a8] outline-none transition-all placeholder:text-white/30">
+                    <input type="email" name="email" placeholder="Email Address" required class="w-full bg-white/5 border border-white/20 p-4 rounded-2xl focus:border-[#5b84a8] outline-none transition-all placeholder:text-white/30">
+                </div>
+                <textarea name="message" rows="4" placeholder="Tell us about the project..." required class="w-full bg-white/5 border border-white/20 p-4 rounded-2xl focus:border-[#5b84a8] outline-none transition-all placeholder:text-white/30"></textarea>
+                <button type="submit" class="w-full bg-[#5b84a8] hover:bg-white hover:text-[#1a3c5a] py-5 rounded-2xl font-black text-xl transition-all shadow-2xl active:scale-95">Send Transmission</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-12 px-6 border-t border-slate-200 text-center">
+        <div class="flex items-center justify-center gap-4 mb-6">
+            <img src="favicon.png" alt="M" class="h-6 opacity-50 grayscale">
+            <span class="text-slate-400 font-bold tracking-widest text-xs uppercase">Matsullin © 2026</span>
+        </div>
+        <div class="flex justify-center gap-8 text-slate-400 text-sm font-medium">
+            <a href="#" class="hover:text-[#1a3c5a]">Instagram</a>
+            <a href="#" class="hover:text-[#1a3c5a]">YouTube</a>
+            <a href="#" class="hover:text-[#1a3c5a]">Vimeo</a>
+        </div>
     </footer>
 
 </body>
