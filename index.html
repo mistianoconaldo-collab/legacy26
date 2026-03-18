@@ -3,160 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matsullin | Audio-Visual Mastery</title>
-    
-    <meta name="description" content="Matsullin: Precision in Sound. Purpose in Sight. Premium production studio.">
+    <title>Matsullin | Media Production & Brand Marketing</title>
     <link rel="icon" type="image/png" href="favicon.png">
-
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <style>
-        :root {
-            --navy: #1a3c5a;
-            --steel: #5b84a8;
-        }
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-        .hero-mesh {
-            background-color: #1a3c5a;
-            background-image: radial-gradient(at 0% 0%, hsla(210,64%,23%,1) 0, transparent 50%), 
-                              radial-gradient(at 50% 0%, hsla(208,30%,51%,1) 0, transparent 50%);
-        }
-        .audio-card:hover {
-            border-color: var(--steel);
-            transform: translateY(-2px);
-        }
+        :root { --navy: #1a3c5a; --steel: #5b84a8; }
+        .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .hero-mesh { background: radial-gradient(at 0% 0%, #1a3c5a 0, transparent 55%), radial-gradient(at 100% 0%, #5b84a8 0, transparent 55%), #0a0f1e; }
+        .card-reveal { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .card-reveal:hover { transform: translateY(-10px); }
+        .market-gradient { background: linear-gradient(135deg, #1a3c5a 0%, #0f172a 100%); }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans antialiased">
+<body class="bg-[#fcfdfe] text-slate-900 font-sans antialiased">
 
-    <nav class="fixed w-full z-50 glass-nav border-b border-slate-200">
+    <nav class="fixed w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <img src="favicon.png" alt="M" class="h-10 w-auto">
                 <span class="font-black text-2xl tracking-tighter text-[#1a3c5a]">MATSULLIN</span>
             </div>
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#about" class="text-sm font-bold uppercase tracking-widest hover:text-[#5b84a8] transition-colors">About</a>
-                <a href="#video" class="text-sm font-bold uppercase tracking-widest hover:text-[#5b84a8] transition-colors">Video</a>
-                <a href="#music" class="text-sm font-bold uppercase tracking-widest hover:text-[#5b84a8] transition-colors">Music</a>
-                <a href="#contact" class="bg-[#1a3c5a] text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-[#5b84a8] transition-all">Work With Us</a>
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#marketing" class="text-xs font-bold uppercase tracking-widest text-[#5b84a8]">Marketing Strategy</a>
+                <a href="#store" class="text-xs font-bold uppercase tracking-widest hover:text-[#5b84a8]">Store</a>
+                <a href="#video" class="text-xs font-bold uppercase tracking-widest hover:text-[#5b84a8]">Portfolio</a>
+                <a href="#contact" class="bg-[#1a3c5a] text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-[#5b84a8] transition-all shadow-lg shadow-navy/20">Get a Quote</a>
             </div>
         </div>
     </nav>
 
-    <section class="hero-mesh pt-44 pb-32 px-6 text-white text-center md:text-left">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
-            <div class="md:w-2/3">
-                <span class="inline-block px-4 py-1 rounded-full bg-white/10 text-xs font-bold tracking-[0.2em] mb-6 border border-white/20 uppercase">Est. 2026 Production Lab</span>
-                <h1 class="text-6xl md:text-8xl font-black leading-none mb-8">Precision in <span class="text-[#5b84a8]">Sound.</span></h1>
-                <p class="text-xl text-slate-300 max-w-xl mb-10 leading-relaxed font-light">
-                    Matsullin is a boutique media studio where frequency meets frame. We engineer auditory legacies and cinematic visuals for the next generation.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#video" class="bg-white text-[#1a3c5a] px-10 py-4 rounded-2xl font-black hover:shadow-2xl transition-all">Explore Work</a>
-                    <a href="#contact" class="bg-transparent border border-white/30 px-10 py-4 rounded-2xl font-black hover:bg-white/10 transition-all">Start Project</a>
+    <section class="hero-mesh pt-48 pb-32 px-6 text-white text-center">
+        <div class="max-w-5xl mx-auto">
+            <span class="inline-block px-4 py-1 rounded-full bg-white/10 text-[10px] font-black tracking-[0.3em] mb-6 border border-white/20 uppercase">Total Brand Domination</span>
+            <h1 class="text-6xl md:text-8xl font-black leading-tight mb-6 tracking-tighter">Your Sound. <br>Your Vision. <span class="text-[#5b84a8]">Marketed.</span></h1>
+            <p class="text-xl text-slate-300 mb-10 font-light max-w-2xl mx-auto">Matsullin doesn't just create media; we build **Brand Ecosystems**. We bridge the gap between high-end production and viral marketing strategy.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#marketing" class="bg-[#5b84a8] text-white px-10 py-5 rounded-2xl font-black text-lg hover:shadow-2xl hover:scale-105 transition-all">See Strategy</a>
+                <a href="#store" class="bg-white/10 border border-white/20 backdrop-blur px-10 py-5 rounded-2xl font-black text-lg hover:bg-white/20 transition-all">Shop Assets</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="marketing" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-[#5b84a8] font-black uppercase tracking-[0.2em] text-sm mb-4">The Matsullin Method</h2>
+                <h3 class="text-5xl font-black text-[#1a3c5a] mb-8 leading-tight">We Engineer <br>Virality.</h3>
+                <p class="text-slate-600 text-lg mb-8 leading-relaxed">Most studios stop at the "Export" button. We start there. Our marketing hub ensures your content is optimized for every platform's algorithm before it even hits the web.</p>
+                
+                <ul class="space-y-6">
+                    <li class="flex gap-4">
+                        <div class="w-8 h-8 rounded-full bg-[#1a3c5a] text-white flex items-center justify-center shrink-0 font-bold">1</div>
+                        <div><p class="font-bold text-[#1a3c5a]">Content Layering</p><p class="text-sm text-slate-500 text-sm">We turn one music video into 20+ pieces of high-engagement social content.</p></div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="w-8 h-8 rounded-full bg-[#1a3c5a] text-white flex items-center justify-center shrink-0 font-bold">2</div>
+                        <div><p class="font-bold text-[#1a3c5a]">Sonic Branding</p><p class="text-sm text-slate-500">Creating a unique audio identity that makes your brand instantly recognizable.</p></div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="w-8 h-8 rounded-full bg-[#1a3c5a] text-white flex items-center justify-center shrink-0 font-bold">3</div>
+                        <div><p class="font-bold text-[#1a3c5a]">Direct Commerce</p><p class="text-sm text-slate-500">Integrating digital stores so you monetize your fans directly, skipping the middlemen.</p></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="market-gradient p-12 rounded-[3rem] shadow-3xl text-white relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 opacity-10 text-8xl font-black">M</div>
+                <h4 class="text-xs font-bold uppercase tracking-widest text-[#5b84a8] mb-8 text-center">Campaign Analytics (Estimated)</h4>
+                <div class="space-y-10">
+                    <div class="relative pt-1">
+                        <div class="flex mb-2 items-center justify-between"><span class="text-xs font-bold inline-block py-1 px-2 uppercase rounded-full text-[#5b84a8] bg-white/5 tracking-widest">Audience Retention</span><span class="text-xs font-black inline-block">92%</span></div>
+                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-white/10"><div style="width:92%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#5b84a8]"></div></div>
+                    </div>
+                    <div class="relative pt-1">
+                        <div class="flex mb-2 items-center justify-between"><span class="text-xs font-bold inline-block py-1 px-2 uppercase rounded-full text-emerald-400 bg-white/5 tracking-widest">Growth Velocity</span><span class="text-xs font-black inline-block">74%</span></div>
+                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-white/10"><div style="width:74%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-500"></div></div>
+                    </div>
+                </div>
+                <div class="mt-12 bg-white/5 border border-white/10 p-6 rounded-2xl text-center backdrop-blur">
+                    <p class="text-slate-400 text-[10px] uppercase font-bold tracking-[0.3em] mb-2">Matsullin Impact Scale</p>
+                    <p class="text-4xl font-black">Elite Class</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-24 px-6 bg-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-[#5b84a8] font-black uppercase tracking-widest text-sm mb-4">The Philosophy</h2>
-            <p class="text-3xl md:text-4xl font-bold text-[#1a3c5a] leading-tight italic">
-                "In an era of digital noise, we specialize in intentionality. We don't just capture moments—we engineer them."
-            </p>
-            <div class="mt-12 h-1 w-20 bg-[#5b84a8] mx-auto rounded-full"></div>
-        </div>
-    </section>
-
-    <section id="video" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="flex items-center justify-between mb-12">
-            <h2 class="text-4xl font-black text-[#1a3c5a]">Visual Reel</h2>
-            <div class="h-px flex-1 bg-slate-200 mx-8 hidden md:block"></div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div class="group cursor-pointer">
-                <div class="aspect-video rounded-[2rem] overflow-hidden shadow-2xl bg-slate-200 relative">
-                    <img src="https://images.unsplash.com/photo-1492691523567-6170c3295db5?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Cinematography">
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-all"></div>
+    <section id="store" class="py-24 px-6 bg-slate-50 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center text-4xl font-black text-[#1a3c5a] mb-16">The Marketplace</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-[2.5rem] card-reveal border border-slate-100">
+                    <div class="aspect-square bg-slate-50 rounded-3xl mb-6 flex items-center justify-center text-[#1a3c5a] font-black text-4xl">🎚️</div>
+                    <h3 class="text-xl font-black mb-1 text-[#1a3c5a]">Sample Pack Vol. 1</h3>
+                    <p class="text-xs text-slate-400 mb-6 font-bold uppercase tracking-widest">Digital Download</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-black text-[#1a3c5a]">$35</span>
+                        <button class="bg-[#1a3c5a] text-white px-6 py-2 rounded-xl text-xs font-bold">Buy Now</button>
+                    </div>
                 </div>
-                <h3 class="mt-6 text-2xl font-bold text-[#1a3c5a]">Project: Nocturnal</h3>
-                <p class="text-slate-500 uppercase tracking-widest text-xs font-bold">Cinematography / 4K</p>
-            </div>
-            <div class="group cursor-pointer">
-                <div class="aspect-video rounded-[2rem] overflow-hidden shadow-2xl bg-slate-200 relative">
-                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Music Video">
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-all"></div>
+                <div class="bg-white p-6 rounded-[2.5rem] card-reveal border border-slate-100">
+                    <div class="aspect-square bg-slate-50 rounded-3xl mb-6 flex items-center justify-center text-[#1a3c5a] font-black text-4xl">🎬</div>
+                    <h3 class="text-xl font-black mb-1 text-[#1a3c5a]">Cinematic LUTs</h3>
+                    <p class="text-xs text-slate-400 mb-6 font-bold uppercase tracking-widest">Color Presets</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-black text-[#1a3c5a]">$25</span>
+                        <button class="bg-[#1a3c5a] text-white px-6 py-2 rounded-xl text-xs font-bold">Buy Now</button>
+                    </div>
                 </div>
-                <h3 class="mt-6 text-2xl font-bold text-[#1a3c5a]">The Studio Sessions</h3>
-                <p class="text-slate-500 uppercase tracking-widest text-xs font-bold">Documentary / Sound Design</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="music" class="py-24 px-6 bg-slate-100">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-4xl font-black text-[#1a3c5a] mb-16 underline decoration-[#5b84a8] decoration-4 underline-offset-8">Acoustic Identity</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                <div class="audio-card bg-white p-8 rounded-3xl border border-transparent shadow-sm transition-all">
-                    <div class="w-12 h-12 bg-[#1a3c5a] text-white rounded-xl flex items-center justify-center font-bold mb-6">01</div>
-                    <h4 class="font-bold text-xl text-[#1a3c5a] mb-2">Steel Skies</h4>
-                    <p class="text-sm text-slate-400 mb-6 uppercase tracking-tighter">Mastering / Final Cut</p>
-                    <audio controls class="w-full h-8">
-                        <source src="#" type="audio/mpeg">
-                    </audio>
-                </div>
-                <div class="audio-card bg-white p-8 rounded-3xl border border-transparent shadow-sm transition-all">
-                    <div class="w-12 h-12 bg-[#1a3c5a] text-white rounded-xl flex items-center justify-center font-bold mb-6">02</div>
-                    <h4 class="font-bold text-xl text-[#1a3c5a] mb-2">Echoes of Matsullin</h4>
-                    <p class="text-sm text-slate-400 mb-6 uppercase tracking-tighter">Atmospheric Score</p>
-                    <audio controls class="w-full h-8">
-                        <source src="#" type="audio/mpeg">
-                    </audio>
-                </div>
-                <div class="audio-card bg-white p-8 rounded-3xl border border-transparent shadow-sm transition-all">
-                    <div class="w-12 h-12 bg-[#1a3c5a] text-white rounded-xl flex items-center justify-center font-bold mb-6">03</div>
-                    <h4 class="font-bold text-xl text-[#1a3c5a] mb-2">Deep Logic</h4>
-                    <p class="text-sm text-slate-400 mb-6 uppercase tracking-tighter">Engineered Bass</p>
-                    <audio controls class="w-full h-8">
-                        <source src="#" type="audio/mpeg">
-                    </audio>
+                <div class="bg-white p-6 rounded-[2.5rem] card-reveal border border-slate-100">
+                    <div class="aspect-square bg-slate-50 rounded-3xl mb-6 flex items-center justify-center text-[#1a3c5a] font-black text-4xl">💎</div>
+                    <h3 class="text-xl font-black mb-1 text-[#1a3c5a]">Exclusive License</h3>
+                    <p class="text-xs text-slate-400 mb-6 font-bold uppercase tracking-widest">Full Production</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-black text-[#1a3c5a]">$250+</span>
+                        <button class="bg-[#1a3c5a] text-white px-6 py-2 rounded-xl text-xs font-bold">Inquire</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto text-center">
-        <div class="bg-[#1a3c5a] p-12 md:p-20 rounded-[3rem] shadow-3xl text-white relative overflow-hidden">
-            <h3 class="text-4xl font-black mb-4">Start Your Narrative.</h3>
-            <p class="text-slate-300 mb-10">Available for select projects worldwide.</p>
-            
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4 text-left">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <input type="text" name="name" placeholder="Full Name" required class="w-full bg-white/5 border border-white/20 p-4 rounded-2xl focus:border-[#5b84a8] outline-none transition-all placeholder:text-white/30">
-                    <input type="email" name="email" placeholder="Email Address" required class="w-full bg-white/5 border border-white/20 p-4 rounded-2xl focus:border-[#5b84a8] outline-none transition-all placeholder:text-white/30">
+    <section id="contact" class="max-w-4xl mx-auto py-32 px-6">
+        <div class="bg-[#1a3c5a] p-12 md:p-20 rounded-[3.5rem] shadow-4xl text-white">
+            <h3 class="text-5xl font-black mb-8 tracking-tighter text-center italic">Scale Your Brand.</h3>
+            <form action="https://formspree.io/f/YOUR_ID" method="POST" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input type="text" name="name" placeholder="Full Name" required class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl focus:border-[#5b84a8] outline-none transition-all placeholder:text-white/20">
+                    <input type="email" name="email" placeholder="Email" required class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl focus:border-[#5b84a8] outline-none transition-all placeholder:text-white/20">
                 </div>
-                <textarea name="message" rows="4" placeholder="Tell us about the project..." required class="w-full bg-white/5 border border-white/20 p-4 rounded-2xl focus:border-[#5b84a8] outline-none transition-all placeholder:text-white/30"></textarea>
-                <button type="submit" class="w-full bg-[#5b84a8] hover:bg-white hover:text-[#1a3c5a] py-5 rounded-2xl font-black text-xl transition-all shadow-2xl active:scale-95">Send Transmission</button>
+                <textarea name="message" rows="5" placeholder="Tell us about your brand goals..." required class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl focus:border-[#5b84a8] outline-none transition-all placeholder:text-white/20"></textarea>
+                <button type="submit" class="w-full bg-[#5b84a8] py-6 rounded-2xl font-black text-xl hover:bg-white hover:text-[#1a3c5a] transition-all transform active:scale-95 shadow-2xl">Execute Strategy</button>
             </form>
         </div>
     </section>
 
-    <footer class="py-12 px-6 border-t border-slate-200 text-center">
-        <div class="flex items-center justify-center gap-4 mb-6">
-            <img src="favicon.png" alt="M" class="h-6 opacity-50 grayscale">
-            <span class="text-slate-400 font-bold tracking-widest text-xs uppercase">Matsullin © 2026</span>
-        </div>
-        <div class="flex justify-center gap-8 text-slate-400 text-sm font-medium">
-            <a href="#" class="hover:text-[#1a3c5a]">Instagram</a>
-            <a href="#" class="hover:text-[#1a3c5a]">YouTube</a>
-            <a href="#" class="hover:text-[#1a3c5a]">Vimeo</a>
-        </div>
+    <footer class="py-12 border-t border-slate-100 text-center">
+        <img src="favicon.png" alt="M" class="h-8 mx-auto mb-6 opacity-30 grayscale">
+        <p class="text-slate-400 text-[10px] font-black uppercase tracking-[0.5em]">Matsullin © 2026 | Brand Marketing Hub</p>
     </footer>
 
 </body>
