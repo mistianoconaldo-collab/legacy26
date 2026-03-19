@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matsullin | Media Production & Brand Marketing</title>
-   <link rel="icon" type="favicon.png" href="favicon.png?v=2">
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root { --navy: #1a3c5a; --steel: #5b84a8; }
-        .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.05); }
-        .hero-mesh { background: radial-gradient(at 0% 0%, #1a3c5a 0, transparent 55%), radial-gradient(at 100% 0%, #5b84a8 0, transparent 55%), #0a0f1e; }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .hero-mesh { 
+            background: radial-gradient(at 0% 0%, #1a3c5a 0, transparent 55%), 
+                        radial-gradient(at 100% 0%, #5b84a8 0, transparent 55%), 
+                        #0a0f1e; 
+        }
         .card-reveal { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        .card-reveal:hover { transform: translateY(-10px); }
+        .card-reveal:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
         .market-gradient { background: linear-gradient(135deg, #1a3c5a 0%, #0f172a 100%); }
+        
+        /* Smooth Fade In */
+        .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body class="bg-[#fcfdfe] text-slate-900 font-sans antialiased">
@@ -20,25 +31,38 @@
     <nav class="fixed w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <img src="favicon.png" alt="M" class="h-10 w-auto">
+                <div class="h-10 w-10 bg-[#1a3c5a] rounded-lg flex items-center justify-center text-white font-black">M</div>
                 <span class="font-black text-2xl tracking-tighter text-[#1a3c5a]">MATSULLIN</span>
             </div>
+            
             <div class="hidden lg:flex items-center gap-8">
-                <a href="#marketing" class="text-xs font-bold uppercase tracking-widest text-[#5b84a8]">Marketing Strategy</a>
-                <a href="#store" class="text-xs font-bold uppercase tracking-widest hover:text-[#5b84a8]">Store</a>
-                <a href="#video" class="text-xs font-bold uppercase tracking-widest hover:text-[#5b84a8]">Portfolio</a>
-                <a href="#contact" class="bg-[#1a3c5a] text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-[#5b84a8] transition-all shadow-lg shadow-navy/20">Get a Quote</a>
+                <a href="#marketing" class="text-xs font-bold uppercase tracking-widest text-[#5b84a8] hover:text-[#1a3c5a] transition-colors">Marketing</a>
+                <a href="#store" class="text-xs font-bold uppercase tracking-widest hover:text-[#5b84a8] transition-colors">Store</a>
+                <a href="#portfolio" class="text-xs font-bold uppercase tracking-widest hover:text-[#5b84a8] transition-colors">Portfolio</a>
+                <a href="#contact" class="bg-[#1a3c5a] text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-[#5b84a8] transition-all shadow-lg shadow-navy/20 active:scale-95">Get a Quote</a>
             </div>
+
+            <button class="lg:hidden text-[#1a3c5a]" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b px-6 py-4 space-y-4">
+            <a href="#marketing" class="block text-xs font-bold uppercase">Marketing Strategy</a>
+            <a href="#store" class="block text-xs font-bold uppercase">Store</a>
+            <a href="#contact" class="block text-[#1a3c5a] font-bold uppercase">Contact</a>
         </div>
     </nav>
 
-    <section class="hero-mesh pt-48 pb-32 px-6 text-white text-center">
-        <div class="max-w-5xl mx-auto">
+    <section class="hero-mesh pt-48 pb-32 px-6 text-white text-center overflow-hidden">
+        <div class="max-w-5xl mx-auto fade-in">
             <span class="inline-block px-4 py-1 rounded-full bg-white/10 text-[10px] font-black tracking-[0.3em] mb-6 border border-white/20 uppercase">Total Brand Domination</span>
             <h1 class="text-6xl md:text-8xl font-black leading-tight mb-6 tracking-tighter">Your Sound. <br>Your Vision. <span class="text-[#5b84a8]">Marketed.</span></h1>
-            <p class="text-xl text-slate-300 mb-10 font-light max-w-2xl mx-auto">Matsullin doesn't just create media; we build **Brand Ecosystems**. We bridge the gap between high-end production and viral marketing strategy.</p>
+            <p class="text-xl text-slate-300 mb-10 font-light max-w-2xl mx-auto leading-relaxed">Matsullin doesn't just create media; we build **Brand Ecosystems**. We bridge the gap between high-end production and viral marketing strategy.</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#marketing" class="bg-[#5b84a8] text-white px-10 py-5 rounded-2xl font-black text-lg hover:shadow-2xl hover:scale-105 transition-all">See Strategy</a>
+                <a href="#marketing" class="bg-[#5b84a8] text-white px-10 py-5 rounded-2xl font-black text-lg hover:shadow-2xl hover:-translate-y-1 transition-all">See Strategy</a>
                 <a href="#store" class="bg-white/10 border border-white/20 backdrop-blur px-10 py-5 rounded-2xl font-black text-lg hover:bg-white/20 transition-all">Shop Assets</a>
             </div>
         </div>
@@ -52,31 +76,42 @@
                 <p class="text-slate-600 text-lg mb-8 leading-relaxed">Most studios stop at the "Export" button. We start there. Our marketing hub ensures your content is optimized for every platform's algorithm before it even hits the web.</p>
                 
                 <ul class="space-y-6">
-                    <li class="flex gap-4">
-                        <div class="w-8 h-8 rounded-full bg-[#1a3c5a] text-white flex items-center justify-center shrink-0 font-bold">1</div>
-                        <div><p class="font-bold text-[#1a3c5a]">Content Layering</p><p class="text-sm text-slate-500 text-sm">We turn one music video into 20+ pieces of high-engagement social content.</p></div>
+                    <li class="flex gap-4 items-start">
+                        <div class="w-10 h-10 rounded-xl bg-[#1a3c5a]/5 text-[#1a3c5a] flex items-center justify-center shrink-0 font-bold border border-[#1a3c5a]/10">01</div>
+                        <div><p class="font-bold text-[#1a3c5a] text-lg">Content Layering</p><p class="text-slate-500">We turn one music video into 20+ pieces of high-engagement social content.</p></div>
                     </li>
-                    <li class="flex gap-4">
-                        <div class="w-8 h-8 rounded-full bg-[#1a3c5a] text-white flex items-center justify-center shrink-0 font-bold">2</div>
-                        <div><p class="font-bold text-[#1a3c5a]">Sonic Branding</p><p class="text-sm text-slate-500">Creating a unique audio identity that makes your brand instantly recognizable.</p></div>
+                    <li class="flex gap-4 items-start">
+                        <div class="w-10 h-10 rounded-xl bg-[#1a3c5a]/5 text-[#1a3c5a] flex items-center justify-center shrink-0 font-bold border border-[#1a3c5a]/10">02</div>
+                        <div><p class="font-bold text-[#1a3c5a] text-lg">Sonic Branding</p><p class="text-slate-500">Creating a unique audio identity that makes your brand instantly recognizable.</p></div>
                     </li>
-                    <li class="flex gap-4">
-                        <div class="w-8 h-8 rounded-full bg-[#1a3c5a] text-white flex items-center justify-center shrink-0 font-bold">3</div>
-                        <div><p class="font-bold text-[#1a3c5a]">Direct Commerce</p><p class="text-sm text-slate-500">Integrating digital stores so you monetize your fans directly, skipping the middlemen.</p></div>
+                    <li class="flex gap-4 items-start">
+                        <div class="w-10 h-10 rounded-xl bg-[#1a3c5a]/5 text-[#1a3c5a] flex items-center justify-center shrink-0 font-bold border border-[#1a3c5a]/10">03</div>
+                        <div><p class="font-bold text-[#1a3c5a] text-lg">Direct Commerce</p><p class="text-slate-500">Integrating digital stores so you monetize your fans directly, skipping the middlemen.</p></div>
                     </li>
                 </ul>
             </div>
+            
             <div class="market-gradient p-12 rounded-[3rem] shadow-3xl text-white relative overflow-hidden">
                 <div class="absolute top-0 right-0 p-8 opacity-10 text-8xl font-black">M</div>
                 <h4 class="text-xs font-bold uppercase tracking-widest text-[#5b84a8] mb-8 text-center">Campaign Analytics (Estimated)</h4>
                 <div class="space-y-10">
                     <div class="relative pt-1">
-                        <div class="flex mb-2 items-center justify-between"><span class="text-xs font-bold inline-block py-1 px-2 uppercase rounded-full text-[#5b84a8] bg-white/5 tracking-widest">Audience Retention</span><span class="text-xs font-black inline-block">92%</span></div>
-                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-white/10"><div style="width:92%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#5b84a8]"></div></div>
+                        <div class="flex mb-2 items-center justify-between">
+                            <span class="text-xs font-bold inline-block py-1 px-2 uppercase rounded-full text-[#5b84a8] bg-white/5 tracking-widest">Audience Retention</span>
+                            <span class="text-xs font-black inline-block">92%</span>
+                        </div>
+                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-white/10">
+                            <div style="width:92%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#5b84a8]"></div>
+                        </div>
                     </div>
                     <div class="relative pt-1">
-                        <div class="flex mb-2 items-center justify-between"><span class="text-xs font-bold inline-block py-1 px-2 uppercase rounded-full text-emerald-400 bg-white/5 tracking-widest">Growth Velocity</span><span class="text-xs font-black inline-block">74%</span></div>
-                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-white/10"><div style="width:74%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-500"></div></div>
+                        <div class="flex mb-2 items-center justify-between">
+                            <span class="text-xs font-bold inline-block py-1 px-2 uppercase rounded-full text-emerald-400 bg-white/5 tracking-widest">Growth Velocity</span>
+                            <span class="text-xs font-black inline-block">74%</span>
+                        </div>
+                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-white/10">
+                            <div style="width:74%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-500"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="mt-12 bg-white/5 border border-white/10 p-6 rounded-2xl text-center backdrop-blur">
@@ -89,57 +124,15 @@
 
     <section id="store" class="py-24 px-6 bg-slate-50 border-y border-slate-200">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-center text-4xl font-black text-[#1a3c5a] mb-16">The Marketplace</h2>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-[#1a3c5a]">The Marketplace</h2>
+                <p class="text-slate-500 mt-2">Premium tools for independent creators.</p>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded-[2.5rem] card-reveal border border-slate-100">
-                    <div class="aspect-square bg-slate-50 rounded-3xl mb-6 flex items-center justify-center text-[#1a3c5a] font-black text-4xl">🎚️</div>
+                    <div class="aspect-square bg-slate-50 rounded-3xl mb-6 flex items-center justify-center text-[#1a3c5a] font-black text-4xl group-hover:scale-110 transition-transform">🎚️</div>
                     <h3 class="text-xl font-black mb-1 text-[#1a3c5a]">Sample Pack Vol. 1</h3>
                     <p class="text-xs text-slate-400 mb-6 font-bold uppercase tracking-widest">Digital Download</p>
                     <div class="flex justify-between items-center">
                         <span class="text-xl font-black text-[#1a3c5a]">$35</span>
-                        <button class="bg-[#1a3c5a] text-white px-6 py-2 rounded-xl text-xs font-bold">Buy Now</button>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-[2.5rem] card-reveal border border-slate-100">
-                    <div class="aspect-square bg-slate-50 rounded-3xl mb-6 flex items-center justify-center text-[#1a3c5a] font-black text-4xl">🎬</div>
-                    <h3 class="text-xl font-black mb-1 text-[#1a3c5a]">Cinematic LUTs</h3>
-                    <p class="text-xs text-slate-400 mb-6 font-bold uppercase tracking-widest">Color Presets</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-xl font-black text-[#1a3c5a]">$25</span>
-                        <button class="bg-[#1a3c5a] text-white px-6 py-2 rounded-xl text-xs font-bold">Buy Now</button>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-[2.5rem] card-reveal border border-slate-100">
-                    <div class="aspect-square bg-slate-50 rounded-3xl mb-6 flex items-center justify-center text-[#1a3c5a] font-black text-4xl">💎</div>
-                    <h3 class="text-xl font-black mb-1 text-[#1a3c5a]">Exclusive License</h3>
-                    <p class="text-xs text-slate-400 mb-6 font-bold uppercase tracking-widest">Full Production</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-xl font-black text-[#1a3c5a]">$250+</span>
-                        <button class="bg-[#1a3c5a] text-white px-6 py-2 rounded-xl text-xs font-bold">Inquire</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="max-w-4xl mx-auto py-32 px-6">
-        <div class="bg-[#1a3c5a] p-12 md:p-20 rounded-[3.5rem] shadow-4xl text-white">
-            <h3 class="text-5xl font-black mb-8 tracking-tighter text-center italic">Scale Your Brand.</h3>
-            <form action="https://formspree.io/f/YOUR_ID" method="POST" class="space-y-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <input type="text" name="name" placeholder="Full Name" required class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl focus:border-[#5b84a8] outline-none transition-all placeholder:text-white/20">
-                    <input type="email" name="email" placeholder="Email" required class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl focus:border-[#5b84a8] outline-none transition-all placeholder:text-white/20">
-                </div>
-                <textarea name="message" rows="5" placeholder="Tell us about your brand goals..." required class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl focus:border-[#5b84a8] outline-none transition-all placeholder:text-white/20"></textarea>
-                <button type="submit" class="w-full bg-[#5b84a8] py-6 rounded-2xl font-black text-xl hover:bg-white hover:text-[#1a3c5a] transition-all transform active:scale-95 shadow-2xl">Execute Strategy</button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="py-12 border-t border-slate-100 text-center">
-        <img src="favicon.png" alt="M" class="h-8 mx-auto mb-6 opacity-30 grayscale">
-        <p class="text-slate-400 text-[10px] font-black uppercase tracking-[0.5em]">Matsullin © 2026 | Brand Marketing Hub</p>
-    </footer>
-
-</body>
-</html>
+                        <button class="bg-[#1a3c5a] text-white px-6 py-2 rounded-xl text-xs font-bold hover:bg-[#5b84a8] transition-colors
