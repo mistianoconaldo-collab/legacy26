@@ -1,39 +1,55 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MATSULLIN // Elite Brand Engineering</title>
+    <title>MATSULLIN | Elite Brand Engineering</title>
+    <link rel="icon" href="https://mistianoconaldo-collab.github.io/legacy26/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #05070a; color: #f8fafc; }
-        .text-glow { text-shadow: 0 0 20px rgba(91, 132, 168, 0.3); }
-        .bento-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s ease; }
-        .bento-card:hover { background: rgba(255, 255, 255, 0.06); border-color: #5b84a8; transform: scale(1.02); }
-        .nav-blur { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(5, 7, 10, 0.8); }
-        @keyframes pulse-soft { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
-        .status-pulse { animation: pulse-soft 2s infinite; }
+        body { background-color: #0a0a0a; color: #ffffff; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
     </style>
 </head>
-<body class="antialiased selection:bg-[#5b84a8] selection:text-white">
+<body>
 
-    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl">
-        <div class="nav-blur border border-white/10 rounded-full px-8 py-4 flex items-center justify-between shadow-2xl">
-            <div class="flex items-center gap-2">
-                <div class="w-2 h-2 rounded-full bg-emerald-500 status-pulse"></div>
-                <span class="font-black tracking-tighter text-xl">MATSULLIN</span>
-            </div>
-            <div class="hidden md:flex gap-8 text-[10px] uppercase font-bold tracking-[0.2em] text-slate-400">
-                <a href="#method" class="hover:text-white transition-colors">Method</a>
-                <a href="#store" class="hover:text-white transition-colors">Market</a>
-                <a href="#contact" class="text-[#5b84a8] hover:text-white">Inquire</a>
-            </div>
+    <nav class="flex justify-between items-center p-8 max-w-6xl mx-auto">
+        <h1 class="text-xl font-bold tracking-tighter">MATSULLIN</h1>
+        <div class="space-x-6 text-sm opacity-70">
+            <a href="#method">Method</a>
+            <a href="#store">Market</a>
+            <a href="mailto:hello@matsullin.com">Inquire</a>
         </div>
     </nav>
 
-    <section class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#1a3c5a_0%,transparent_50%)] opacity-20"></div>
+    <header class="py-20 text-center">
+        <h2 class="text-6xl md:text-8xl font-black mb-6 uppercase tracking-tight">Build the Empire.</h2>
+        <p class="text-xl opacity-60 mb-10">High-end production meets aggressive algorithmic marketing.</p>
+        <a href="mailto:hello@matsullin.com" class="bg-white text-black px-8 py-4 font-bold hover:bg-gray-200 transition">START PROJECT</a>
+    </header>
+
+    <section class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 py-20 text-center">
+        <div><h3 class="text-3xl font-bold">92%</h3><p class="text-xs opacity-50 uppercase">Retention</p></div>
+        <div><h3 class="text-3xl font-bold">20x</h3><p class="text-xs opacity-50 uppercase">Content Yield</p></div>
+        <div><h3 class="text-3xl font-bold">4K</h3><p class="text-xs opacity-50 uppercase">Native Res</p></div>
+        <div><h3 class="text-3xl font-bold">∞</h3><p class="text-xs opacity-50 uppercase">Scalability</p></div>
+    </section>
+
+    <section id="store" class="max-w-6xl mx-auto py-20">
+        <h2 class="text-3xl font-bold mb-12 border-l-2 border-white pl-4">THE ARMORY</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="glass p-8"><h3>Midnight LUT Pack</h3><p class="text-sm opacity-50 mb-4">$45.00</p></div>
+            <div class="glass p-8"><h3>Industrial Samples V2</h3><p class="text-sm opacity-50 mb-4">$30.00</p></div>
+            <div class="glass p-8"><h3>Director's Overlay Kit</h3><p class="text-sm opacity-50 mb-4">$65.00</p></div>
+        </div>
+    </section>
+
+    <footer class="text-center py-10 opacity-30 text-sm">
+        &copy; MATSULLIN MMXVI — MMXXVI
+    </footer>
+
+</body>
+</html>
         <div class="relative z-10 text-center">
             <h2 class="text-[#5b84a8] font-bold text-xs uppercase tracking-[0.5em] mb-8">Creative Intelligence Agency</h2>
             <h1 class="text-7xl md:text-9xl font-black tracking-tighter leading-[0.85] mb-12">
